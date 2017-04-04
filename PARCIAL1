@@ -1,17 +1,23 @@
 
 #include <stdio.h>
 
-for( i=0 ; i<n ; i++ )
+int main()
 {
-  for ( j=0 ; j<n ; j++ )
-  {
-    if i!=j && A[i]==A[j]
-    {
-      break;
-    }
-  }
-  if (j==n)
-  {
-    system out.println(A[i]);
-  }
+int numero[10],n,i=0,j=0,contador[10]={};
+printf("introduzca los numeros");
+scanf("%i,&n");
+for(i=0;i<n;i++)
+{
+printf("numero &i: ", i + 1);
+scanf("&i", &numero[i]);
+}
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+{
+if(numero[i]==numero[j])
+contador[i]++;
+}
+printf("%i\n", numero[i], contador[i]);
+return 0;
 }

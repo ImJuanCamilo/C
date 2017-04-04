@@ -1,23 +1,33 @@
 
+#include <stdlib.h>
 #include <stdio.h>
+
 
 int main()
 {
-int numero[10],n,i=0,j=0,contador[10]={};
-printf("introduzca los numeros");
-scanf("%i,&n");
-for(i=0;i<n;i++)
-{
-printf("numero &i: ", i + 1);
-scanf("&i", &numero[i]);
-}
-for(i=0;i<n;i++)
-{
-for(j=0;j<n;j++)
-{
-if(numero[i]==numero[j])
-contador[i]++;
-}
-printf("%i\n", numero[i], contador[i]);
-return 0;
-}
+    int A[]={2,3,4,5,2,3};
+    int B[]={2,3,4,5,2,3};
+    int n = sizeof (A); 
+    int i, j;
+
+
+    for( i = 0; i<n; i++)
+    {
+            for( j = 0; j < n; j++)
+            {
+                    if(i != j && A[i] == A[j])
+                    {
+                         break;
+                    }
+            }
+             if(j == n)
+             {
+                  printf("%i", A[i]);
+                  break;
+             }
+    }        
+            
+  system("PAUSE"); 
+   return 0;
+  
+  }
